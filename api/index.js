@@ -163,7 +163,7 @@ app.post("/push/subscribe", (req, res) => {
   }, req.body.delay*1000);
 });
 
-const server = app.listen(5000, startFunc);
+const server = app.listen(process.env.PORT || 5000, startFunc);
 
 const io = socketio(server);
 
